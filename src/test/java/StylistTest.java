@@ -36,5 +36,23 @@ public class StylistTest {
     assertTrue(mStylist.getId() > 0);
   }
 
+@Test
+ public void find_returnsStylistWithSameId_secondStylist() {
+   Stylist secondStylist = new Stylist("Dr. Jongy Brogan", "He's a nutritionist");
+   secondStylist.save();
+   assertEquals(Stylist.find(secondStylist.getId()), secondStylist);
+ }
+
+  @Test
+  public void equals_returnsTrueIfNamesAretheSame() {
+    Stylist secondStylist = new Stylist("Steve Brule", "He's a doctor too.");
+    assertTrue(mStylist.equals(secondStylist));
+  }
+
+  @Test
+  public void save_savesIntoDatabase_true() {
+    mStylist.save();
+    assertTrue(Stylist.all().get(0).equals(mStylist));
+  }
 
 }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ClientTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-09-24T00:44:23" hostname="epicodus-107.local" time="0.092">
+  <properties/>
+  <testcase name="Client_instantiesWithClient_String" classname="ClientTest" time="0.082"/>
+  <testcase name="Client_instantiatesCorrectly_true" classname="ClientTest" time="0.005"/>
+  <testcase name="Client_instantiesWithInfo_String" classname="ClientTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

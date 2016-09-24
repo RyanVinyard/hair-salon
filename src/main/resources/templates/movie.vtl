@@ -1,0 +1,17 @@
+<h1>$movie.getTitle()</h1>
+<h2>$movie.getGenre()</h2>
+<h3>Reviews:</h3>
+
+<ul>
+  #foreach($review in $movie.getReviews())
+   <li><a href="/movies/$movie.getId()/reviews/$review.getId()">$review.getReviewer()</a></li>
+  #end
+</ul>
+
+<form action="/movies/$movie.getId()/delete" method="post">
+  <button type="submit" class="btn btn-danger" id="delete-movie">Delete Movie</button>
+</form>
+
+<a href="/movies/$movie.getId()/reviews/new">Add a new review</a>
+</br>
+<a href="/movies">All movies</a>

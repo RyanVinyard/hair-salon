@@ -49,6 +49,18 @@ public class Client {
     }
   }
 
+  public static Client find(int id) {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT * FROM clients WHERE id=:id;";
+      Client client = con.createQuery(sql)
+        .addParameter("id", id)
+        .executeAndFetchFirst(Client.class);
+      return client;
+    }
+  }
+
+
+
   public void update(String content) {
     try(Connection con = DB.sql2o.open()) {
       String sql = "UPDATE clients SET info = :info WHERE id=:id";
@@ -59,5 +71,16 @@ public class Client {
     }
   }
 
-
+  @Override
+  public boolean equals(Object otherClient) {
+    if(!(otherClient instanceof Client)) {
+      return false;
+    } else {
+      Client newClient = (Client) otherClient;
+      return this.getClientName().equals(newClient.getClientName()) &&
+        this.getInfo().equals(newClient.getInfo()) &&
+        this.getId() == newClient.getId() &&
+        this.getStylistId() == newClient.getStylistId();
+    }
+  }
 }

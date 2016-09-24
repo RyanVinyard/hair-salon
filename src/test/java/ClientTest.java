@@ -34,18 +34,52 @@ public class ClientTest {
     assertTrue(mClient.getId() > 0);
   }
 
-  // @Test
-  // public void all_returnsAllInstancesOfClient_true() {
-  //   mClient.save();
-  //   Client secondClient = new Client("Steve Brule", "This man is insane", 1);
-  //   secondClient.save();
-  //   assertEquals(true, Client.all().get(0).equals(mClient));
-  //   assertEquals(true, Client.all().get(1).equals(secondClient));
-  // }
+  @Test
+  public void all_returnsAllInstancesOfClient_true() {
+    mClient.save();
+    Client secondClient = new Client("Steve Brule", "This man is insane", 1);
+    secondClient.save();
+    assertEquals(true, Client.all().get(0).equals(mClient));
+    assertEquals(true, Client.all().get(1).equals(secondClient));
+  }
 
   @Test
   public void clear_emptiesAllClientsFromArrayList_0() {
     assertEquals(Client.all().size(), 0);
+  }
+
+  @Test
+  public void find_returnsClientWithSameId_secondClient() {
+    mClient.save();
+    Client secondClient = new Client("Lane21", "This movie sucks.", 1);
+    secondClient.save();
+    assertEquals(mClient.find(secondClient.getId()), secondClient);
+  }
+
+  @Test
+  public void equals_returnsTrueIfClientsAreTheSame() {
+    Client secondClient = new Client("Client123", "This guy is great.", 1);
+    assertTrue(mClient.equals(secondClient));
+  }
+
+  @Test
+  public void save_returnsTrueIfClientsAretheSame() {
+    mClient.save();
+    assertTrue(Client.all().get(0).equals(mClient));
+  }
+
+  @Test
+  public void save_assignsIdToObject() {
+    mClient.save();
+    Client savedClient = Client.all().get(0);
+    assertEquals(mClient.getId(), savedClient.getId());
+  }
+
+  @Test
+  public void update_updatesClient_true() {
+    mClient.save();
+    mClient.update("This guy is okay.");
+    assertEquals("This guy is great.", Client.find(mClient.getId()).getInfo());
   }
 
 }

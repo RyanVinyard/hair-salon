@@ -12,7 +12,7 @@ public class Stylist {
     this.bio = bio;
   }
 
-  public String getName() {
+  public String getStylistName() {
     return stylistName;
   }
 
@@ -68,7 +68,7 @@ public class Stylist {
       return false;
     } else {
       Stylist newStylist = (Stylist) otherStylist;
-      return this.getName().equals(newStylist.getName()) &&
+      return this.getStylistName().equals(newStylist.getStylistName()) &&
              this.getBio().equals(newStylist.getBio()) &&
              this.getId() == newStylist.getId();
     }

@@ -5,7 +5,7 @@ h6 {
   text-align: center;
   margin-top: 24px;
 }
-
+/*
 #mainHeader {
   text-align: center;
   font-family: 'Shadows Into Light', cursive;
@@ -44,23 +44,6 @@ h6 {
   height: 60px;
   width: auto;
 }
-/*
-.resize {
-  width: 1080px;
-  height: auto;
-  transition: all .2s ease-in-out;
-}
-
-.resize:hover { transform: scale(1.1); }*/
-
-/*.zoomBox {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}*/
 
 .item {
   position: relative;
@@ -80,4 +63,4 @@ h6 {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-}
+}*/

@@ -22,7 +22,7 @@ public class StylistTest {
 
   @Test
   public void Stylist_instantiatesWithName_String() {
-    assertEquals("Steve Brule", mStylist.getName());
+    assertEquals("Steve Brule", mStylist.getStylistName());
   }
 
   @Test

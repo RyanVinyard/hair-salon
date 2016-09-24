@@ -1,56 +1,49 @@
-<div class="zoomBox">
-  <div class="item">
-    <img src="http://www.radioone.fm/wp-content/uploads/2016/02/Movie-1.jpg" alt="picture of theatre" class="resize"/>
-  </div>
-</div>
-
-
 <div class="jumbotron">
-  <h1>Movies</h1>
+  <h1>Vinyard Salon</h1>
 
-  #if($movies)
-    <p>Click on a movie to see its reviews:</p>
+  #if($stylists)
+    <p>Click on a stylist to see their clients:</p>
     <ul>
-      #foreach ($movie in $movies)
-        <li><a href="/movies/$movie.getId()">$movie.getTitle()</a></li>
+      #foreach ($stylist in $stylists)
+        <li><a href="/stylists/$stylist.getId()">$stylist.getStylistName()</a></li>
       #end
     </ul>
   #else
-    <p>There are no movies yet!</p>
+    <p>There are no stylists yet!</p>
   #end
 
-  <h2>New Movie:</h2>
+  <h2>Add a new Stylist:</h2>
 
-  <form action="/movies" method="post">
-    <label for="title">Movie title</label>
+  <form action="/stylists" method="post">
+    <label for="name">Stylist name</label>
     <br>
-    <input id="title" name="title" type="text">
+    <input id="name" name="name" type="text">
     <br>
-    <label for="genre">Movie genre</label>
+    <label for="bio">Short stylist bio</label>
     <br>
-    <input id="genre" name="genre" type="text">
+    <input id="bio" name="bio" type="text">
     <br>
-    <button type="submit" id="titleSubmit" class="btn btn-success">Add Movie</button>
+    <button type="submit" id="nameSubmit" class="btn btn-success">Add Stylist</button>
   </form>
 </div>
 <div class="jumbotron">
-  <h2>New Review:</h2>
+  <h2>New Client:</h2>
 
-  <form action="/reviews" method="post">
-    <label for="movieId">Select a movie to review</label>
-    <select id='movieId' name='movieId' type='text'>
-      #foreach($movie in $movies)
-        <option value="$movie.getId()">$movie.getTitle()</option>
+  <form action="/clients" method="post">
+    <label for="stylistId">Select a stylist to assign a client to</label>
+    <select id='stylistId' name='stylistId' type='text'>
+      #foreach($stylist in $stylists)
+        <option value="$stylist.getId()">$stylist.getStylistName()</option>
       #end
     </select>
     <div class="form-group">
-      <label for="reviewer">User Name</label>
-      <input id="reviewer" name="reviewer" type="text" class="form-control" autocomplete="off">
-      <label for="content">Review:</label>
+      <label for="client">Client Name</label>
+      <input id="client" name="client" type="text" class="form-control" autocomplete="off">
+      <label for="content">Client info</label>
       <br>
-      <textarea name="content" cols="140" rows="5" type="text" autocomplete="off"></textarea>
+      <textarea name="info" cols="140" rows="5" type="text" autocomplete="off"></textarea>
     </div>
 
-    <button type="submit" class="btn btn-success">Add Review</button>
+    <button type="submit" class="btn btn-success">Add Client</button>
   </form>
 </div>

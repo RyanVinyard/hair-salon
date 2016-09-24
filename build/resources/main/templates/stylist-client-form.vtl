@@ -1,0 +1,14 @@
+<h1>Add a client to $stylist.getStylistName()</h1>
+
+<form action="/clients" method="post">
+  <input id="stylistId" name="stylistId" type="hidden" value="$stylist.getId()">
+
+  <div class="form-group">
+    <label for="client">Name</label>
+    <input id="client" name="client" type="text" class="form-control">
+    <label for="content">Name</label>
+    <textarea name="content" cols="140" rows="5" type="text" autocomplete="off"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-success">Add Client</button>
+</form>

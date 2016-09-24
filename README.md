@@ -19,7 +19,7 @@ _This is a webapp that allows you to make a list of stylists and their clients. 
 
 ## Known Bugs
 
-_Currently, stylist names are not being inserted into the SQL database correctly. This breaks the app._
+_Currently, stylist names are not being inserted into the SQL database correctly. This breaks the app. To do: fix name display, add styling_
 
 ## Support and contact details
 

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ClientTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2016-09-24T00:58:51" hostname="epicodus-107.local" time="0.238">
+<testsuite name="ClientTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2016-09-24T01:00:46" hostname="epicodus-107.local" time="0.238">
   <properties/>
-  <testcase name="equals_returnsTrueIfClientsAreTheSame" classname="ClientTest" time="0.078"/>
+  <testcase name="equals_returnsTrueIfClientsAreTheSame" classname="ClientTest" time="0.076"/>
   <testcase name="update_updatesClient_true" classname="ClientTest" time="0.042"/>
   <testcase name="getId_instantiesWithID_1" classname="ClientTest" time="0.01"/>
   <testcase name="save_returnsTrueIfClientsAretheSame" classname="ClientTest" time="0.014"/>
   <testcase name="Client_instantiesWithClient_String" classname="ClientTest" time="0.005"/>
-  <testcase name="Client_instantiatesCorrectly_true" classname="ClientTest" time="0.005"/>
-  <testcase name="clear_emptiesAllClientsFromArrayList_0" classname="ClientTest" time="0.01"/>
-  <testcase name="all_returnsAllInstancesOfClient_true" classname="ClientTest" time="0.021"/>
-  <testcase name="save_assignsIdToObject" classname="ClientTest" time="0.013"/>
-  <testcase name="delete_deletesClient_true" classname="ClientTest" time="0.017"/>
-  <testcase name="find_returnsClientWithSameId_secondClient" classname="ClientTest" time="0.018"/>
+  <testcase name="Client_instantiatesCorrectly_true" classname="ClientTest" time="0.006"/>
+  <testcase name="clear_emptiesAllClientsFromArrayList_0" classname="ClientTest" time="0.009"/>
+  <testcase name="all_returnsAllInstancesOfClient_true" classname="ClientTest" time="0.023"/>
+  <testcase name="save_assignsIdToObject" classname="ClientTest" time="0.012"/>
+  <testcase name="delete_deletesClient_true" classname="ClientTest" time="0.016"/>
+  <testcase name="find_returnsClientWithSameId_secondClient" classname="ClientTest" time="0.017"/>
   <testcase name="Client_instantiesWithInfo_String" classname="ClientTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

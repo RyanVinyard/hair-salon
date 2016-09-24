@@ -23,4 +23,33 @@ public class Stylist {
   public int getId() {
     return id;
   }
+
+  public static List<Stylist> all() {
+    String sql = "SELECT * FROM stylists ORDER BY stylistName;";
+    try(Connection con = DB.sql2o.open()) {
+      return con.createQuery(sql).executeAndFetch(Stylist.class);
+    }
+  }
+
+  public List<Client> getClients() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT * FROM clients where stylistId=:id;";
+      return con.createQuery(sql)
+        .addParameter("id", this.id)
+        .executeAndFetch(Client.class);
+    }
+  }
+
+  public void save() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "INSERT INTO stylists(stylistName, bio) VALUES (:stylistName, :bio);";
+      this.id = (int) con.createQuery(sql, true)
+
+        .addParameter("stylistName", this.stylistName)
+        .addParameter("bio", this.bio)
+        .executeUpdate()
+        .getKey();
+    }
+  }
+
 }

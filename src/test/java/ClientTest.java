@@ -28,4 +28,24 @@ public class ClientTest {
     assertEquals("This guy is great.", mClient.getInfo());
   }
 
+  @Test
+  public void getId_instantiesWithID_1(){
+    mClient.save();
+    assertTrue(mClient.getId() > 0);
+  }
+
+  // @Test
+  // public void all_returnsAllInstancesOfClient_true() {
+  //   mClient.save();
+  //   Client secondClient = new Client("Steve Brule", "This man is insane", 1);
+  //   secondClient.save();
+  //   assertEquals(true, Client.all().get(0).equals(mClient));
+  //   assertEquals(true, Client.all().get(1).equals(secondClient));
+  // }
+
+  @Test
+  public void clear_emptiesAllClientsFromArrayList_0() {
+    assertEquals(Client.all().size(), 0);
+  }
+
 }

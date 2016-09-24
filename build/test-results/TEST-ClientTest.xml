@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ClientTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-09-24T00:44:23" hostname="epicodus-107.local" time="0.092">
+<testsuite name="ClientTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-09-24T00:50:09" hostname="epicodus-107.local" time="0.125">
   <properties/>
-  <testcase name="Client_instantiesWithClient_String" classname="ClientTest" time="0.082"/>
+  <testcase name="getId_instantiesWithID_1" classname="ClientTest" time="0.089"/>
+  <testcase name="Client_instantiesWithClient_String" classname="ClientTest" time="0.005"/>
   <testcase name="Client_instantiatesCorrectly_true" classname="ClientTest" time="0.005"/>
-  <testcase name="Client_instantiesWithInfo_String" classname="ClientTest" time="0.005"/>
+  <testcase name="clear_emptiesAllClientsFromArrayList_0" classname="ClientTest" time="0.021"/>
+  <testcase name="Client_instantiesWithInfo_String" classname="ClientTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

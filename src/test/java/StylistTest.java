@@ -30,4 +30,11 @@ public class StylistTest {
     assertEquals("He's a doctor too.", mStylist.getBio());
   }
 
+  @Test
+  public void Stylist_instantiatesWithID_1() {
+    mStylist.save();
+    assertTrue(mStylist.getId() > 0);
+  }
+
+
 }

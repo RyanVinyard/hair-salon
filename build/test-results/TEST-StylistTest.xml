@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StylistTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-09-24T00:44:23" hostname="epicodus-107.local" time="0.014">
+<testsuite name="StylistTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-09-24T00:50:09" hostname="epicodus-107.local" time="0.026">
   <properties/>
+  <testcase name="Stylist_instantiatesWithID_1" classname="StylistTest" time="0.011"/>
   <testcase name="Stylist_instantiatesCorrectly_true" classname="StylistTest" time="0.005"/>
-  <testcase name="Stylist_instantiatesWithName_String" classname="StylistTest" time="0.004"/>
+  <testcase name="Stylist_instantiatesWithName_String" classname="StylistTest" time="0.005"/>
   <testcase name="Stylist_instantiatesWithBio_String" classname="StylistTest" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

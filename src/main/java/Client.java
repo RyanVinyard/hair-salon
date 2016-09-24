@@ -29,4 +29,35 @@ public class Client {
   public int getId() {
     return id;
   }
+
+  public static List<Client> all() {
+    String sql = "SELECT * FROM clients;";
+    try(Connection con = DB.sql2o.open()) {
+      return con.createQuery(sql).executeAndFetch(Client.class);
+    }
+  }
+
+  public void save() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "INSERT INTO clients(clientName, info, stylistId) VALUES (:clientName, :info, :stylistId);";
+      this.id = (int) con.createQuery(sql, true)
+        .addParameter("clientName", this.clientName)
+        .addParameter("info", this.info)
+        .addParameter("stylistId", this.stylistId)
+        .executeUpdate()
+        .getKey();
+    }
+  }
+
+  public void update(String content) {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "UPDATE clients SET info = :info WHERE id=:id";
+      con.createQuery(sql)
+        .addParameter("info", info)
+        .addParameter("id", id)
+        .executeUpdate();
+    }
+  }
+
+
 }

@@ -33,7 +33,7 @@ public class Stylist {
 
   public List<Client> getClients() {
     try(Connection con = DB.sql2o.open()) {
-      String sql = "SELECT * FROM clients where stylistId=:id;";
+      String sql = "SELECT * FROM clients WHERE stylistId=:id;";
       return con.createQuery(sql)
         .addParameter("id", this.id)
         .executeAndFetch(Client.class);
@@ -54,7 +54,6 @@ public class Stylist {
     try(Connection con = DB.sql2o.open()) {
       String sql = "INSERT INTO stylists(stylistName, bio) VALUES (:stylistName, :bio);";
       this.id = (int) con.createQuery(sql, true)
-
         .addParameter("stylistName", this.stylistName)
         .addParameter("bio", this.bio)
         .executeUpdate()

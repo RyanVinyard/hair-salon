@@ -19,7 +19,7 @@ _This is a webapp that allows you to make a list of stylists and their clients. 
 
 ## Known Bugs
 
-_Currently, client names and info are not being inserted into the SQL database correctly. This makes clients impossible to view._
+_Currently, a 500 error is thrown when attempting to delete a stylist._
 
 ## Support and contact details
 

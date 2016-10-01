@@ -11,15 +11,15 @@ _This is a webapp that allows you to make a list of stylists and their clients. 
 ## Setup/Installation Requirements
 
 * _In PSQL:_
-* _CREATE DATABASE hair_salon_
-* _CREATE TABLE stylists_
-* _CREATE TABLE clients_
+* _CREATE DATABASE hair_salon;_
+* _CREATE TABLE stylists (id serial PRIMARY KEY, stylistName varchar, bio varchar);_
+* _CREATE TABLE clients (id serial PRIMARY KEY, clientName varchar, info varchar, stylistId int);_
 * _Clone repo at https://github.com/RyanVinyard/hair-salon_
 * _Run on a gradle server and connect!_
 
 ## Known Bugs
 
-_Currently, stylist names are not being inserted into the SQL database correctly. This breaks the app. To do: fix name display, add styling_
+_Currently, client names and info are not being inserted into the SQL database correctly. This makes clients impossible to view._
 
 ## Support and contact details
 

@@ -2,7 +2,7 @@
 
 #foreach ($client in $clients)
   <h4>$client.getClientName()</h4>
-  <p>$client.getInfo</p>
+  <p>$client.getInfo()</p>
     <form action="/clients/$client.getId()/delete" method="post">
       <button type="submit" class="btn" id="deleteClient">Delete</button>
     </form>

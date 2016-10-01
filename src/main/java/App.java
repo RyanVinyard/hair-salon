@@ -62,8 +62,8 @@ public class App {
     post("stylists/:id/clients/new", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       Stylist stylist = Stylist.find(Integer.parseInt(request.queryParams("stylistId")));
-      String clientName = request.queryParams("stylistName");
-      String info = request.queryParams("bio"); 
+      String clientName = request.queryParams("clientName");
+      String info = request.queryParams("info");
       Client newClient = new Client(clientName, info, stylist.getId());
       newClient.save();
       response.redirect("/clients");
@@ -72,7 +72,7 @@ public class App {
 
     post("/stylists/:id/delete", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      Stylist stylist = Stylist.find(Integer.parseInt(request.queryParams(":stylistId")));
+      Stylist stylist = Stylist.find(Integer.parseInt(request.queryParams("stylistId")));
       stylist.delete();
       model.put("stylist" ,stylist);
       response.redirect("/stylists");

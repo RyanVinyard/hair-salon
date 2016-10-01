@@ -1,13 +1,9 @@
 <h1>Client List</h1>
 
-#if ($clients)
-  <ul>
-    #foreach ($client in $clients)
-      <li><a href="/clients/$client.getId()">$client.getClientName()</a></li>
-    #end
-  </ul>
-#else
-  <p>No clients!</p>
+#foreach ($client in $clients)
+  <h4>$client.getClientName()</h4>
+  <p>$client.getInfo</p>
+    <form action="/clients/$client.getId()/delete" method="post">
+      <button type="submit" class="btn" id="deleteClient">Delete</button>
+    </form>
 #end
-
-<a href="/clients/new">Add a new client</a>

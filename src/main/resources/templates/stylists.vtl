@@ -1,7 +1,11 @@
 <h1>All Stylists</h1>
 <ul>
   #foreach ($stylist in $stylists)
-    <li><a href="/stylists/$stylist.getId()">$stylist.getStylistName()</a></li>
+    <h4><a href="/stylists/$stylist.getId()">$stylist.getStylistName()</a></h4>
+    <p>$stylist.getBio()</p>
+    <form action="/stylists/$client.getStylistId()/delete" method="post">
+      <input id="stylistId" name="stylistId" type="hidden" value="$stylist.getId()">
+      <button type="submit" class="btn" id="delete-client">Delete</button>
+    </form>
   #end
-</ul>
 <a href="/stylists/new">Add a new stylist</a>

@@ -19,7 +19,7 @@ _This is a webapp that allows you to make a list of stylists and their clients. 
 
 ## Known Bugs
 
-_Currently, a 500 error is thrown when attempting to delete a stylist._
+_No known bugs at this time._
 
 ## Support and contact details
 

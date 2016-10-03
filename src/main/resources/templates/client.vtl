@@ -1,17 +1,19 @@
-<h2>Client for $stylist.getStylistName()</h2>
 <h1>$client.getClientName()</h1>
+<p>$client.getInfo()</p>
 
-<h2>$client.getContent()</h2>
-<h2>Edit client:</h2>
+<h4>Is this client's information incorrect? Update it below.</h4>
+<br>
+<div class="form-group">
+  <form action="/client/$client.getId()/update" method="post">
+    <label for="info">Info:</label>
+    <input type="text" name="info", class="form-control" value="$client.getInfo()">
+    <button type="submit" class="btn">Confirm Edit</button>
+  </form>
 
-<form action="/stylists/$client.getStylistId()/clients/$client.getId()" method="post">
-  <label for="content">Client</label>
-<textarea name="content" cols="140" rows="5" type="text" autocomplete="off"></textarea>
-  <button type="submit" class="btn btn-info">Update Client</button>
+<br>
+
+<h4>Is this client erroneous, or no longer with us? Click below to delete.</h4>
+<form action="/clients/$client.getId()/delete" method="post">
+  <button type="submit" class="btn" id="deleteClient">Delete</button>
 </form>
-
-<form action="/stylists/$client.getStylistId()/clients/$client.getId()/delete" method="post">
-  <button type="submit" class="btn btn-danger" id="delete-client">Delete Client</button>
-</form>
-
-<a href="/stylists/$stylist.getId()">Return to $stylist.getStylistName()</a>
+<p><a href="/stylists/$client.getStylistId()">Go Back</a></p>

@@ -5,6 +5,39 @@ h6 {
   text-align: center;
   margin-top: 24px;
 }
+
+body {
+  background-image: url("http://www.hallwines.com/media/wysiwyg/hall/vineyards/Vineyard_BBS_1515_768px.jpg");
+  background-size: cover;
+}
+
+.jumbotron {
+  padding-top: 0px;
+  padding-left: 40px;
+  padding-top: 40px;
+  margin-left: 80px;
+  margin-right: 80px;
+  height: 100vh;
+  background-color: rgba(210, 200, 220, 0.90) !important;
+  border-radius: 14px;
+}
+
+#mainHeader {
+  font-family: 'Dancing Script', cursive;
+  font-size: 52pt;
+  color: #a142f4;
+  text-align: center;
+  text-shadow: 2px 2px #000000;
+}
+
+#homeButton {
+  font-family: 'Dancing Script', cursive;
+  color: #a142f4;
+  text-align: center;
+  text-shadow: 2px 2px #000000;
+  font-size: 24pt;
+}
+
 /*
 #mainHeader {
   text-align: center;

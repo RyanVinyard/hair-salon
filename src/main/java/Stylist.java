@@ -81,4 +81,10 @@ public class Stylist {
         .executeUpdate();
     }
   }
+
+  public void deleteClients(){
+    for(Client client : this.getClients()){
+      client.delete();
+    }
+  }
 }

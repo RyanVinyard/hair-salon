@@ -74,13 +74,14 @@ public class App {
       String info = request.queryParams("info");
       Client newClient = new Client(clientName, info, stylist.getId());
       newClient.save();
-      response.redirect("/clients");
+      response.redirect("/stylists");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
     post("/stylists/:id/delete", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       Stylist stylist = Stylist.find(Integer.parseInt(request.queryParams("stylistId")));
+      stylist.deleteClients();
       stylist.delete();
       model.put("stylist" ,stylist);
       response.redirect("/stylists");
@@ -98,7 +99,7 @@ public class App {
       Map<String, Object> model = new HashMap<String, Object>();
       Client client = Client.find(Integer.parseInt(request.params("id")));
       client.delete();
-      response.redirect("/clients");
+      response.redirect("/stylists");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
@@ -106,7 +107,7 @@ public class App {
       Map<String, Object> model = new HashMap<String, Object>();
       Client client = Client.find(Integer.parseInt(request.params("id")));
       client.update(request.queryParams("info"));
-      response.redirect("/clients");
+      response.redirect("/stylists");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }

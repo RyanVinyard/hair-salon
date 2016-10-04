@@ -1,6 +1,11 @@
 <h1>$stylist.getStylistName()</h1>
 <h2>$stylist.getBio()</h2>
 
+<form action="/stylists/$client.getStylistId()/delete" method="post">
+  <input id="stylistId" name="stylistId" type="hidden" value="$stylist.getId()">
+  <button type="submit" class="btn" id="delete-client">Delete</button>
+</form>
+
 <h3>Clients:</h3>
 
 <ul>

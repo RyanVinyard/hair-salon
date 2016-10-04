@@ -14,13 +14,13 @@ _This is a webapp that allows you to make a list of stylists and their clients. 
 * _Start PSQL by typing PSQL in a separate terminal window_
 * _In PSQL:_
 * _CREATE DATABASE hair_salon;_
-* _Connect to hair_salon database by typing "\c hair_salon"_
-* _CREATE TABLE stylists (id serial PRIMARY KEY, stylistName varchar, bio varchar);_
-* _CREATE TABLE clients (id serial PRIMARY KEY, clientName varchar, info varchar, stylistId int);_
-* _CREATE DATABASE hair_salon_test WITH TEMPLATE hair_salon_
+* _CREATE DATABASE hair_salon_test;_
+* _In a new terminal window, run command "psql hair_salon < hair_salon.sql"_
+* _Also run "psql hair_salon_test < hair_salon_test.sql"_
+* _Back in PSQL, connect to hair_salon database by typing "\c hair_salon"_
 * _Clone repo at https://github.com/RyanVinyard/hair-salon_
-* _In a separate terminal window, connect to hair-salon and run gradle test_
-* _Run on a gradle server and connect!_
+* _In a separate terminal window, run gradle test to ensure complete functionality_
+* _Gradle run and connect to http://localhost:4567_
 
 ## Known Bugs
 
